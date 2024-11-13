@@ -21,16 +21,17 @@ app.post("/send-campaign", async (req, res) => {
         let myNumber = req.body.phoneNo;
         let Name = req.body.Name;
 
-        const apiBody = {
-            campaignName: "Barberaa_Mega_Sale",
-            campaignDesc: "campaignDesc",
-            templateName: "barberaa_utility",
-            languageCode: "en",
-            messages: [{
-              clientWaNumber = myNumber.length === 10 ? "91" + myNumber : myNumber,
-                variables: [Name]
-            }]
-        };
+       const apiBody = {
+        campaignName: "Barberaa_Mega_Sale",
+        campaignDesc: "campaignDesc",
+        templateName: "barberaa_utility",
+        languageCode: "en",
+        messages: [{
+            clientWaNumber: (myNumber.length === 10 ? "91" + myNumber : myNumber),  // Use `:` instead of `=`
+            variables: [Name]
+        }]
+    };
+
 
         const response = await axios.post(sendBulkCampaignAPI, apiBody, {
             headers: {
