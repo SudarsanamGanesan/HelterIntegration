@@ -27,7 +27,7 @@ app.post("/send-campaign", async (req, res) => {
         templateName: "barberaa_utility",
         languageCode: "en",
         messages: [{
-            clientWaNumber: (myNumber.length === 10 ? "91" + myNumber : myNumber),  // Use `:` instead of `=`
+            clientWaNumber: myNumber.length === 10 ? "91" + myNumber : myNumber,  // Use `:` instead of `=`
             variables: [Name]
         }]
     };
