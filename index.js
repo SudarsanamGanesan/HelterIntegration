@@ -25,7 +25,6 @@ app.post("/send-campaign", async (req, res) => {
             campaignDesc: "campaignDesc",
             templateName: "barberaa_utility",
             languageCode: "en",
-            templateContent: "templateContent",
             messages: [{
                 clientWaNumber: myNumber.startsWith("91") ? myNumber : "91" + myNumber,
                 variables: []
