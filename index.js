@@ -21,29 +21,19 @@ app.post("/send-campaign", async (req, res) => {
         let myNumber = req.body.phoneNo;
         let Name = req.body.Name;
 
-       
+
         
+
 
         const apiBody = {
             messages: [
                 {
                     clientWaNumber: myNumber.length === 10 ? "91" + myNumber : myNumber,
-                    templateName: "barberaa_utility",
-                    templateContent: "🎉 Happy Birthday to Us! 🎉\n\nHi  {{1}},\nWe’re turning 1 and throwing a party YOU don’t want to miss!\n\n✨ Get pampered with a gift from us — *FLAT 50%* off on all salon and spa services across Chennai!\n\n📅 Save the dates: *November 14-16*\n🎟️ Coupon code goes live at 12 AM on Nov 14!\n\nGet ready to RSVP in style:\n\n\t1.\tDownload the Barberaa App \n( https://linktr.ee/barberaa )\n\t2.\tFollow @barberaa_app on Instagram\n\t3.\tTurn on notifications to be the first to snag this treat!\n\nWe can’t wait to celebrate with you! 🎈",
+                    templateName: "new_user_utility_template",
+                    templateContent: "Hey {{1}} !\n\n🎉 Welcome to Barberaa! 🎉\nGet ready for our Mega Sale from 14th to 16th November! Enjoy FLAT 50% OFF on all salon and spa bookings during this limited-time event. 💇‍♀️💅\n\nWith Barberaa, never wait at the salon again! Enjoy quick, easy, and hassle-free bookings at your favorite salons with the best deals in town. Book Now! ✨ \n\nBarberaa\nOne Makeover Away",
                     templateHeader: "",
                     languageCode: "en",
                     variables: [
-                        {
-                            type: "header",
-                            parameters: [
-                                {
-                                    type: "image",
-                                    image: {
-                                        link: "https://heltar-chat-s3.s3.ap-south-1.amazonaws.com/-R7RsFO7ThPtjdpZwSK5bDlP576lPnR2FmaWcBSZ-EIMG_3300.JPG"
-                                    }
-                                }
-                            ]
-                        },
                         {
                             type: "body",
                             parameters: [
@@ -55,7 +45,7 @@ app.post("/send-campaign", async (req, res) => {
                         }
                     ],
                     messageType: "template",
-                    refId: "vYkL0vBv5XrIBV0uQGE_N"
+                    refId: "xc31RybmBcPHrnBe_3-ex"
                 }
             ]
         };
