@@ -21,9 +21,9 @@ app.post("/send-campaign", async (req, res) => {
         let myNumber = req.body.phoneNo;
 
         const apiBody = {
-            campaignName: "campaignName",
+            campaignName: "Barberaa_Mega_Sale",
             campaignDesc: "campaignDesc",
-            templateName: "barberaa_test",
+            templateName: "barberaa_utility",
             languageCode: "en",
             templateContent: "templateContent",
             messages: [{
