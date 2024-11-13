@@ -19,6 +19,7 @@ app.use(express.json());
 app.post("/send-campaign", async (req, res) => {
     try {
         let myNumber = req.body.phoneNo;
+        let Name=req.body.Name;
 
         const apiBody = {
             campaignName: "Barberaa_Mega_Sale",
@@ -27,7 +28,7 @@ app.post("/send-campaign", async (req, res) => {
             languageCode: "en",
             messages: [{
                 clientWaNumber: myNumber.startsWith("91") ? myNumber : "91" + myNumber,
-                variables: []
+                variables: [Name]
             }]
         };
 
